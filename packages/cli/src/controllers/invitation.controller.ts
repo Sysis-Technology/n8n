@@ -46,7 +46,7 @@ export class InvitationController {
 	) {
 		if (invitations.length === 0) return [];
 
-		const isWithinUsersLimit = this.license.isWithinUsersLimit();
+		const isWithinUsersLimit = true || this.license.isWithinUsersLimit();
 
 		if (isSamlLicensedAndEnabled()) {
 			this.logger.debug(

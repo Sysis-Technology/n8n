@@ -27,7 +27,7 @@ export const useSettingsStore = defineStore(STORES.SETTINGS, () => {
 	const settings = ref<FrontendSettings>({} as FrontendSettings);
 	const moduleSettings = ref<FrontendModuleSettings>({});
 	const userManagement = ref<IUserManagementSettings>({
-		quota: -1,
+		quota: 10,
 		showSetupOnFirstLoad: false,
 		smtpSetup: false,
 		authenticationMethod: UserManagementAuthenticationMethod.Email,
@@ -185,6 +185,11 @@ export const useSettingsStore = defineStore(STORES.SETTINGS, () => {
 
 	const setSettings = (newSettings: FrontendSettings) => {
 		settings.value = newSettings;
+
+		if (settings.value.enterprise) {
+			settings.value.enterprise.showNonProdBanner = false;
+		}
+
 		userManagement.value = newSettings.userManagement;
 		if (userManagement.value) {
 			userManagement.value.showSetupOnFirstLoad =

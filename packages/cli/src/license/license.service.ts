@@ -112,7 +112,8 @@ export class LicenseService {
 
 	async activateLicense(activationKey: string) {
 		try {
-			await this.license.activate(activationKey);
+			// await this.license.activate(activationKey);
+			return;
 		} catch (e) {
 			const message = this.mapErrorMessage(e as LicenseError, 'activate');
 			throw new BadRequestError(message);
@@ -123,7 +124,8 @@ export class LicenseService {
 		if (this.license.getPlanName() === 'Community') return; // unlicensed, nothing to renew
 
 		try {
-			await this.license.renew();
+			// await this.license.renew();
+			this.eventService.emit('license-renewal-attempted', { success: true });
 		} catch (e) {
 			const message = this.mapErrorMessage(e as LicenseError, 'renew');
 

@@ -1,0 +1,138 @@
+
+> n8n-monorepo@1.107.0 dev /home/len/work/n8n/n8n
+> turbo run dev --parallel --env-mode=loose --filter=!@n8n/design-system --filter=!@n8n/chat --filter=!@n8n/task-runner
+
+• Packages in scope: @n8n/ai-workflow-builder, @n8n/api-types, @n8n/backend-common, @n8n/backend-test-utils, @n8n/client-oauth2, @n8n/codemirror-lang, @n8n/composables, @n8n/config, @n8n/constants, @n8n/create-node, @n8n/db, @n8n/decorators, @n8n/di, @n8n/errors, @n8n/eslint-config, @n8n/extension-sdk, @n8n/i18n, @n8n/imap, @n8n/json-schema-to-zod, @n8n/n8n-benchmark, @n8n/n8n-extension-insights, @n8n/n8n-nodes-langchain, @n8n/node-cli, @n8n/permissions, @n8n/rest-api-client, @n8n/stores, @n8n/storybook, @n8n/stylelint-config, @n8n/typescript-config, @n8n/utils, @n8n/vitest-config, n8n, n8n-containers, n8n-core, n8n-cypress, n8n-editor-ui, n8n-node-dev, n8n-nodes-base, n8n-playwright, n8n-workflow
+• Running dev in 40 packages
+• Remote caching disabled
+n8n-node-dev:dev: cache bypass, force executing 8d22ed21da233478
+@n8n/di:dev: cache bypass, force executing a27875651bf7b8d6
+@n8n/composables:dev: cache bypass, force executing 85c3e2b7a526bd99
+@n8n/eslint-config:dev: cache bypass, force executing f002cac144619c94
+@n8n/stylelint-config:dev: cache bypass, force executing 242c71de47375fdc
+n8n-nodes-base:dev: cache bypass, force executing 58c960da3fc37636
+n8n-workflow:dev: cache bypass, force executing 385e4f2584f4f455
+@n8n/backend-test-utils:dev: cache bypass, force executing b9e4038293952a53
+@n8n/vitest-config:dev: cache bypass, force executing d0d0506286ac5b2d
+@n8n/decorators:dev: cache bypass, force executing 5cf1351ba97926ba
+@n8n/stylelint-config:dev: 
+@n8n/stylelint-config:dev: > @n8n/stylelint-config@0.0.1 dev /home/len/work/n8n/n8n/packages/@n8n/stylelint-config
+@n8n/stylelint-config:dev: > pnpm watch
+@n8n/stylelint-config:dev: 
+@n8n/backend-test-utils:dev: 
+@n8n/backend-test-utils:dev: > @n8n/backend-test-utils@0.10.0 dev /home/len/work/n8n/n8n/packages/@n8n/backend-test-utils
+@n8n/backend-test-utils:dev: > pnpm watch
+@n8n/backend-test-utils:dev: 
+@n8n/composables:dev: 
+@n8n/composables:dev: > @n8n/composables@1.9.0 dev /home/len/work/n8n/n8n/packages/frontend/@n8n/composables
+@n8n/composables:dev: > vite
+@n8n/composables:dev: 
+@n8n/di:dev: 
+@n8n/di:dev: > @n8n/di@0.9.0 dev /home/len/work/n8n/n8n/packages/@n8n/di
+@n8n/di:dev: > pnpm watch
+@n8n/di:dev: 
+n8n-workflow:dev: 
+n8n-workflow:dev: > n8n-workflow@1.104.0 dev /home/len/work/n8n/n8n/packages/workflow
+n8n-workflow:dev: > pnpm watch
+n8n-workflow:dev: 
+n8n-node-dev:dev: 
+n8n-node-dev:dev: > n8n-node-dev@1.105.0 dev /home/len/work/n8n/n8n/packages/node-dev
+n8n-node-dev:dev: > pnpm watch
+n8n-node-dev:dev: 
+@n8n/decorators:dev: 
+@n8n/decorators:dev: > @n8n/decorators@0.17.0 dev /home/len/work/n8n/n8n/packages/@n8n/decorators
+@n8n/decorators:dev: > pnpm watch
+@n8n/decorators:dev: 
+@n8n/eslint-config:dev: 
+@n8n/eslint-config:dev: > @n8n/eslint-config@0.0.1 dev /home/len/work/n8n/n8n/packages/@n8n/eslint-config
+@n8n/eslint-config:dev: > pnpm watch
+@n8n/eslint-config:dev: 
+n8n-nodes-base:dev: 
+n8n-nodes-base:dev: > n8n-nodes-base@1.105.0 dev /home/len/work/n8n/n8n/packages/nodes-base
+n8n-nodes-base:dev: > pnpm watch
+n8n-nodes-base:dev: 
+@n8n/vitest-config:dev: 
+@n8n/vitest-config:dev: > @n8n/vitest-config@1.5.0 dev /home/len/work/n8n/n8n/packages/@n8n/vitest-config
+@n8n/vitest-config:dev: > pnpm watch
+@n8n/vitest-config:dev: 
+@n8n/backend-test-utils:dev: 
+@n8n/backend-test-utils:dev: > @n8n/backend-test-utils@0.10.0 watch /home/len/work/n8n/n8n/packages/@n8n/backend-test-utils
+@n8n/backend-test-utils:dev: > tsc -p tsconfig.build.json --watch
+@n8n/backend-test-utils:dev: 
+@n8n/stylelint-config:dev: 
+@n8n/stylelint-config:dev: > @n8n/stylelint-config@0.0.1 watch /home/len/work/n8n/n8n/packages/@n8n/stylelint-config
+@n8n/stylelint-config:dev: > tsc --watch
+@n8n/stylelint-config:dev: 
+@n8n/composables:dev: 
+@n8n/composables:dev:   VITE v6.3.5  ready in 401 ms
+@n8n/composables:dev: 
+@n8n/composables:dev:   ➜  Local:   http://localhost:5173/
+@n8n/composables:dev:   ➜  Network: use --host to expose
+n8n-node-dev:dev: 
+n8n-node-dev:dev: > n8n-node-dev@1.105.0 watch /home/len/work/n8n/n8n/packages/node-dev
+n8n-node-dev:dev: > tsc --watch
+n8n-node-dev:dev: 
+n8n-workflow:dev: 
+n8n-workflow:dev: > n8n-workflow@1.104.0 watch /home/len/work/n8n/n8n/packages/workflow
+n8n-workflow:dev: > tsc --build tsconfig.build.esm.json tsconfig.build.cjs.json --watch
+n8n-workflow:dev: 
+@n8n/di:dev: 
+@n8n/di:dev: > @n8n/di@0.9.0 watch /home/len/work/n8n/n8n/packages/@n8n/di
+@n8n/di:dev: > tsc -p tsconfig.build.json --watch
+@n8n/di:dev: 
+@n8n/backend-test-utils:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+@n8n/backend-test-utils:dev: 
+@n8n/decorators:dev: 
+@n8n/decorators:dev: > @n8n/decorators@0.17.0 watch /home/len/work/n8n/n8n/packages/@n8n/decorators
+@n8n/decorators:dev: > tsc -p tsconfig.build.json --watch
+@n8n/decorators:dev: 
+n8n-nodes-base:dev: 
+n8n-nodes-base:dev: > n8n-nodes-base@1.105.0 watch /home/len/work/n8n/n8n/packages/nodes-base
+n8n-nodes-base:dev: > tsc-watch -p tsconfig.build.cjs.json --onCompilationComplete "pnpm copy-nodes-json && tsc-alias -p tsconfig.build.cjs.json" --onSuccess "pnpm n8n-generate-metadata"
+n8n-nodes-base:dev: 
+@n8n/eslint-config:dev: 
+@n8n/eslint-config:dev: > @n8n/eslint-config@0.0.1 watch /home/len/work/n8n/n8n/packages/@n8n/eslint-config
+@n8n/eslint-config:dev: > tsc --watch
+@n8n/eslint-config:dev: 
+@n8n/stylelint-config:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+@n8n/stylelint-config:dev: 
+@n8n/vitest-config:dev: 
+@n8n/vitest-config:dev: > @n8n/vitest-config@1.5.0 watch /home/len/work/n8n/n8n/packages/@n8n/vitest-config
+@n8n/vitest-config:dev: > tsc -p tsconfig.build.json --watch
+@n8n/vitest-config:dev: 
+n8n-node-dev:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+n8n-node-dev:dev: 
+@n8n/di:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+@n8n/di:dev: 
+n8n-workflow:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+n8n-workflow:dev: 
+n8n-workflow:dev: 
+n8n-workflow:dev: 3:32:59 pm - Found 0 errors. Watching for file changes.
+@n8n/decorators:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+@n8n/decorators:dev: 
+@n8n/eslint-config:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+@n8n/eslint-config:dev: 
+@n8n/vitest-config:dev: [2J[3J[H3:32:59 pm - Starting compilation in watch mode...
+@n8n/vitest-config:dev: 
+n8n-nodes-base:dev: [2J[3J[H3:33:00 pm - Starting compilation in watch mode...
+n8n-nodes-base:dev: 
+@n8n/di:dev: 
+@n8n/di:dev: 3:33:02 pm - Found 0 errors. Watching for file changes.
+@n8n/vitest-config:dev: 
+@n8n/vitest-config:dev: 3:33:03 pm - Found 0 errors. Watching for file changes.
+@n8n/decorators:dev: 
+@n8n/decorators:dev: 3:33:04 pm - Found 0 errors. Watching for file changes.
+@n8n/eslint-config:dev: 
+@n8n/eslint-config:dev: 3:33:04 pm - Found 0 errors. Watching for file changes.
+@n8n/stylelint-config:dev: 
+@n8n/stylelint-config:dev: 3:33:05 pm - Found 0 errors. Watching for file changes.
+@n8n/backend-test-utils:dev: 
+@n8n/backend-test-utils:dev: 3:33:05 pm - Found 0 errors. Watching for file changes.
+n8n-node-dev:dev: 
+n8n-node-dev:dev: 3:33:06 pm - Found 0 errors. Watching for file changes.
+n8n-nodes-base:dev: 
+n8n-nodes-base:dev: 3:33:10 pm -[32m Found 0 errors. Watching for file changes.[39m
+n8n-nodes-base:dev: 
+n8n-nodes-base:dev: > n8n-nodes-base@1.105.0 copy-nodes-json /home/len/work/n8n/n8n/packages/nodes-base
+n8n-nodes-base:dev: > node scripts/copy-nodes-json.js . \&\& tsc-alias -p tsconfig.build.cjs.json
+n8n-nodes-base:dev: 

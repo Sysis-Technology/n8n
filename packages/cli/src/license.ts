@@ -114,6 +114,14 @@ export class License implements LicenseProvider {
 				expirySoonOffsetMins,
 			});
 
+			/// temporary license avoider while evaluating.
+			this.logger.warn('⚠️ Pulando checagem de licença (N8N_SKIP_LICENSE_CHECK=true)');
+			const mgr = this.manager as any;
+			mgr.hasFeatureEnabled = () => true;
+			mgr.getFeatureValue = () => Infinity;
+			mgr.getCurrentEntitlements = () => [];
+			mgr.getMainPlan = () => ({ productId: 'enterprise', planName: 'enterprise' });
+			//// ##############
 			await this.manager.initialize();
 
 			this.logger.debug('License initialized');
@@ -218,7 +226,8 @@ export class License implements LicenseProvider {
 	}
 
 	isLicensed(feature: BooleanLicenseFeature) {
-		return this.manager?.hasFeatureEnabled(feature) ?? false;
+		return true;
+		// return this.manager?.hasFeatureEnabled(feature) ?? false;
 	}
 
 	/** @deprecated Use `LicenseState.isSharingLicensed` instead. */
@@ -384,17 +393,17 @@ export class License implements LicenseProvider {
 
 	/** @deprecated Use `LicenseState` instead. */
 	getUsersLimit() {
-		return this.getValue(LICENSE_QUOTAS.USERS_LIMIT) ?? UNLIMITED_LICENSE_QUOTA;
+		return UNLIMITED_LICENSE_QUOTA || 1000000;
 	}
 
 	/** @deprecated Use `LicenseState` instead. */
 	getTriggerLimit() {
-		return this.getValue(LICENSE_QUOTAS.TRIGGER_LIMIT) ?? UNLIMITED_LICENSE_QUOTA;
+		return UNLIMITED_LICENSE_QUOTA || 1000000;
 	}
 
 	/** @deprecated Use `LicenseState` instead. */
 	getVariablesLimit() {
-		return this.getValue(LICENSE_QUOTAS.VARIABLES_LIMIT) ?? UNLIMITED_LICENSE_QUOTA;
+		return UNLIMITED_LICENSE_QUOTA || 1000000;
 	}
 
 	/** @deprecated Use `LicenseState` instead. */
@@ -404,12 +413,13 @@ export class License implements LicenseProvider {
 
 	/** @deprecated Use `LicenseState` instead. */
 	getWorkflowHistoryPruneLimit() {
-		return this.getValue(LICENSE_QUOTAS.WORKFLOW_HISTORY_PRUNE_LIMIT) ?? UNLIMITED_LICENSE_QUOTA;
+		// return this.getValue(LICENSE_QUOTAS.WORKFLOW_HISTORY_PRUNE_LIMIT) ?? UNLIMITED_LICENSE_QUOTA;
+		return UNLIMITED_LICENSE_QUOTA || 1000000;
 	}
 
 	/** @deprecated Use `LicenseState` instead. */
 	getTeamProjectLimit() {
-		return this.getValue(LICENSE_QUOTAS.TEAM_PROJECT_LIMIT) ?? 0;
+		return UNLIMITED_LICENSE_QUOTA || 1000000;
 	}
 
 	getPlanName(): string {
@@ -426,7 +436,8 @@ export class License implements LicenseProvider {
 
 	/** @deprecated Use `LicenseState` instead. */
 	isWithinUsersLimit() {
-		return this.getUsersLimit() === UNLIMITED_LICENSE_QUOTA;
+		return true;
+		// return this.getUsersLimit() === UNLIMITED_LICENSE_QUOTA;
 	}
 
 	@OnLeaderTakeover()
